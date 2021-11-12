@@ -8,6 +8,10 @@
   --button-bg-color: #f5f4fa;
   --border-header: #ececec;
   --bottom-part-card: #eeeeee;
+  --gradient: rgba(47, 48, 58, 0.4);
+  --icons-social-media: #afb1b8;
+  --button-shadow: rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 h2,
 h3,
@@ -40,6 +44,7 @@ body {
 .link:focus {
   color: var(--accent-color);
 }
+
 .list {
   display: flex;
   padding: 0px;
@@ -59,15 +64,22 @@ body {
 .logo-web {
   color: var(--accent-color);
 }
+
+.logo-studio {
+  color: var(--title-text-color);
+}
+
 .description {
   margin-top: 0px;
   margin-bottom: 0px;
-
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+}
+.item {
+  margin-bottom: 10px;
 }
 /* header */
 
@@ -79,9 +91,6 @@ header {
   align-items: center;
 }
 
-.logo-studio-header {
-  color: var(--title-text-color);
-}
 .site-nav .link.current {
   color: var(--accent-color);
   text-decoration: none;
@@ -93,11 +102,12 @@ header {
   letter-spacing: 0.02em;
   color: var(--title-text-color);
 }
-
-.header-link {
+.site-nav .link,
+.auth-nav .link {
   display: block;
   padding: 32px 0px;
 }
+
 .header-item {
   display: block;
 }
@@ -106,15 +116,28 @@ header {
   margin-left: 50px;
 }
 /* Auth-nav */
+
 .auth-nav {
   display: flex;
   margin-left: auto;
 }
-
-.link-auth {
+.auth-nav .link {
+  display: flex;
+  align-items: center;
   color: var(--primary-text-color);
 }
+.auth-nav .link:hover,
+.auth-nav .link:focus {
+  color: var(--accent-color);
+}
 
+.icon-envelope {
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+}
+.link:hover .icon-envelope {
+  fill: var(--accent-color);
+}
 /* header end*/
 
 /* hero */
@@ -153,40 +176,91 @@ header {
 .hero {
   padding: 200px 0px;
   text-align: center;
+}
+
+.overlay {
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--bg-color);
+  background-image: linear-gradient(to right, var(--gradient), var(--gradient)),
+    url("../images/overlay-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-/* Section*/
-.part-title {
-  margin-bottom: 50px;
+/*Principles*/
 
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-.item {
-  margin-bottom: 10px;
-}
-.principles {
-  margin-top: 0px;
-
+.section .item {
+  margin-top: 30px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+
 .list-item {
   width: 270px;
   margin-right: 30px;
   /* padding-bottom: 30px; */
   background-color: var(--primary-bg-color);
 }
-
+.icon {
+  display: flex;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  background-color: var(--button-bg-color);
+}
+.icon-view {
+  align-self: center;
+}
 .list-item:nth-child(4n) {
   margin-right: 0px;
+}
+/* .subject::before {
+  display: block;
+  content: "";
+  width: 270px;
+  height: 120px;
+  background-color: var(--button-bg-color);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.subject:nth-child(1)::before {
+  background-image: url("../images/antenna.svg");
+}
+
+.subject:nth-child(2)::before {
+  background-image: url("../images/clock.svg");
+}
+
+.subject:nth-child(3)::before {
+  background-image: url("../images/diagram.svg");
+}
+
+.subject:nth-child(4)::before {
+  background-image: url("../images/astronaut.svg");
+} */
+
+/* ========================= what are we doing ============================ */
+
+.part {
+  padding-bottom: 94px;
+}
+.part-title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 .list-works {
   display: block;
@@ -198,36 +272,108 @@ header {
   margin-right: 0px;
 }
 
-.part {
-  padding-bottom: 94px;
-}
 .section {
   padding: 94px 0;
 }
+
+/* ==============================  our team ===================================== */
 
 .part-employees {
   padding: 94px 0px;
   background-color: var(--button-bg-color);
 }
+.part-employees .list-item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
 .team-part {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-
-.employees {
+.part-employees .item {
   text-align: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
-.profession {
+
+.team-part .description {
   text-align: center;
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: var(--primary-text-color);
+}
+
+.icons-social-media {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  align-items: center;
+  padding: 16px 30px 0px 30px;
+  list-style: none;
+}
+.icons-sm {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+}
+
+.link-sm:hover .icon-view {
+  fill: var(--primary-bg-color);
+}
+.icons-sm + .icons-sm {
+  margin-left: 10px;
+}
+.link-sm {
+  display: inherit;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.link-sm:hover {
+  background-color: var(--accent-color);
+}
+.link-sm .icon-view {
+  fill: var(--icons-social-media);
+}
+
+/* regular clients */
+
+.regular {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.our-clients {
+  display: flex;
+  list-style: none;
+  padding: 0px;
+}
+.regular-clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+  border: 1px solid var(--icons-social-media);
+  border-radius: 4px;
+  color: var(--icons-social-media);
+}
+.list-clients:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-icon {
+  fill: var(--icons-social-media);
+}
+.regular-clients:hover .clients-icon {
+  fill: var(--accent-color);
+}
+.regular-clients:hover {
+  border-color: var(--accent-color);
 }
 
 /* Footer */
@@ -236,16 +382,17 @@ header {
   padding: 60px 0px;
   background-color: var(--bg-color);
 }
-.logo-studio-footer {
+.footer-style .logo-studio {
   color: var(--primary-bg-color);
 }
-.company-address {
+.footer-style .description {
   margin-top: 20px;
   margin-bottom: 9px;
   font-style: normal;
   color: var(--primary-bg-color);
 }
-.contact {
+
+.footer-style .link {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -255,9 +402,50 @@ header {
   color: var(--contacts-text-color);
   text-decoration: none;
 }
+
 .first-item {
   margin-bottom: 9px;
 }
+
+.footer-list {
+  padding: 0px;
+  margin: 0px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  list-style: none;
+}
+.call-to-action {
+  display: flex;
+  padding: 0px;
+  list-style: none;
+}
+.call-to-action .link-sm .icon-view {
+  fill: var(--primary-bg-color);
+}
+.call-to-action .link-sm {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.call-to-action .link-sm:hover {
+  background-color: var(--accent-color);
+}
+.footer-style .container {
+  display: flex;
+  align-items: center;
+}
+.footer-call {
+  margin-left: 69px;
+}
+.subtitle {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-bg-color);
+}
+
 /* Portfolio styles */
 .projects-section {
   padding: 94px 0;
@@ -265,7 +453,6 @@ header {
 
 .button-view {
   padding: 6px 22px;
-
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -274,6 +461,7 @@ header {
   color: var(--title-text-color);
   background-color: var(--button-bg-color);
   border: none;
+  border-radius: 4px;
 }
 .filters-item + .filters-item {
   margin-left: 8px;
@@ -285,6 +473,8 @@ header {
   color: var(--primary-bg-color);
   text-decoration: none;
   cursor: pointer;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .filters {
@@ -305,6 +495,11 @@ header {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
+}
+.project-list-item:hover,
+.project-list-item:focus {
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 1px 1px var(--button-shadow);
 }
 
 .project-list-item:nth-child(3n) {
@@ -338,13 +533,4 @@ header {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-}
-/* Footer */
-.footer-list {
-  padding: 0px;
-  margin: 0px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  list-style: none;
 }
