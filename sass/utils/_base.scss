@@ -1,0 +1,127 @@
+h2,
+h3,
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  .header & {
+    display: flex;
+    align-items: center;
+  }
+}
+
+body {
+  color: $title-text-color;
+  background-color: $primary-bg-color;
+  font-family: $main-font;
+}
+img {
+  display: block;
+}
+.link {
+  text-decoration: none;
+  color: $title-text-color;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.list {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  list-style: none;
+}
+.logo {
+  font-family: $secondary-font;
+  font-size: 26px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+.logo-web {
+  color: $accent-color;
+}
+
+.logo-studio {
+  color: $title-text-color;
+
+  .footer-style & {
+    color: $primary-bg-color;
+  }
+}
+.button-style {
+  border-radius: 4px;
+  min-width: 200px;
+  padding: 10px 32px;
+  border: 1px solid transparent;
+  text-align: center;
+
+  color: $primary-bg-color;
+  background-color: $accent-color;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+.description {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $primary-text-color;
+}
+.item {
+  margin-bottom: 10px;
+}
+.list-item {
+  width: 270px;
+  margin-right: 30px;
+  background-color: $primary-bg-color;
+}
+.icon-view {
+  align-self: center;
+}
+.subtitle {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.icons-sm {
+  @include centred();
+
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+  padding: 0px;
+}
+.link-sm {
+  display: inherit;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  @include transition(background-color);
+}
