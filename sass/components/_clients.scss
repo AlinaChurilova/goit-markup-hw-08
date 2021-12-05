@@ -1,14 +1,14 @@
-.regular {
+.clients {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.regular__clients {
+.clients__list {
   display: flex;
   list-style: none;
   margin: 0px;
   padding: 0px;
 }
-.link__clients {
+.clients__link {
   @include centred();
 
   align-items: center;
@@ -24,17 +24,17 @@
   &:focus {
     border-color: $accent-color;
   }
-  &:hover .icon__clients,
-  &:focus .icon__clients {
+  &:hover .clients__icon,
+  &:focus .clients__icon {
     fill: $accent-color;
   }
 }
 
-.list__clients:not(:first-child) {
+.clients__individual:not(:first-child) {
   margin-left: 30px;
 }
 
-.icon__clients {
+.clients__icon {
   fill: $icons-social-media;
   @include transition(fill);
 }

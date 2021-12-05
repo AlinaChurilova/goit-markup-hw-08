@@ -53,16 +53,12 @@ img {
   letter-spacing: 0.03em;
   text-decoration: none;
 }
-.logo-web {
+.logo__web {
   color: $accent-color;
 }
 
-.logo-studio {
+.logo__studio {
   color: $title-text-color;
-
-  .footer-style & {
-    color: $primary-bg-color;
-  }
 }
 .button-style {
   border-radius: 4px;
@@ -117,7 +113,7 @@ img {
   }
   padding: 0px;
 }
-.link-sm {
+.icons-sm__link {
   display: inherit;
   justify-content: center;
   width: 44px;

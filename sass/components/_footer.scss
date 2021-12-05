@@ -12,6 +12,9 @@
     color: $primary-bg-color;
   }
 }
+.logo__studio-white {
+  color: $primary-bg-color;
+}
 .footer-list {
   padding: 0px;
   margin: 0px;
@@ -19,15 +22,15 @@
   font-size: 14px;
   line-height: 1.14;
   list-style: none;
-  .link {
-    @extend %font-style;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.71;
-    list-style: none;
-    color: $contacts-text-color;
-    text-decoration: none;
-  }
+}
+.footer-list__link {
+  @extend %font-style;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.71;
+  list-style: none;
+  color: $contacts-text-color;
+  text-decoration: none;
 }
 .footer-list__mail {
   margin-bottom: 9px;
@@ -36,7 +39,7 @@
   display: flex;
   padding: 0px;
   list-style: none;
-  .link-sm {
+  .icons-sm__link {
     background-color: $footer-link-sm;
     @include transition(background-color);
 
