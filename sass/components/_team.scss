@@ -1,27 +1,28 @@
 .employee {
   padding: 94px 0px;
   background-color: $button-bg-color;
-  .list-item {
-    box-shadow: $shadow-emloyees-card;
-    border-radius: 0px 0px 4px 4px;
-  }
+}
+
+.employee__list-item {
+  box-shadow: $shadow-emloyees-card;
+  border-radius: 0px 0px 4px 4px;
 }
 
 .employee__card {
   padding-top: 30px;
   padding-bottom: 30px;
-  .item {
-    text-align: center;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-  }
-  .description {
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.19;
-  }
+}
+.employee__item {
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+.employee__description {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.19;
 }
 
 .emloyee__social-media {
@@ -42,8 +43,8 @@
   &:focus .icon-view {
     fill: $primary-bg-color;
   }
-  .icon-view {
-    fill: $icons-social-media;
-    @include transition(fill);
-  }
+}
+.employee__icon-view {
+  fill: $icons-social-media;
+  @include transition(fill);
 }

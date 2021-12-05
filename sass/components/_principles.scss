@@ -1,15 +1,15 @@
-.section {
+.principles {
   padding: 94px 0;
-  .item {
-    @extend %font-style;
-    margin-top: 30px;
-    font-weight: 700;
-    line-height: 1.14;
-    text-transform: uppercase;
-  }
+}
+.principles__item {
+  @extend %font-style;
+  margin-top: 30px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
 }
 
-.icon {
+.principles__icon {
   @include centred();
 
   width: 270px;
@@ -17,7 +17,7 @@
   border-radius: 4px;
   background-color: $button-bg-color;
 }
-.list-item {
+.principles__list-item {
   &:nth-child(4n) {
     margin-right: 0px;
   }

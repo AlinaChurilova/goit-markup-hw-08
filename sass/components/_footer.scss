@@ -1,16 +1,16 @@
 .footer-style {
   padding: 60px 0px;
   background-color: $bg-color;
-  .container {
-    display: flex;
-    align-items: baseline;
-  }
-  .description {
-    margin-top: 20px;
-    margin-bottom: 9px;
-    font-style: normal;
-    color: $primary-bg-color;
-  }
+}
+.footer-style__container {
+  display: flex;
+  align-items: baseline;
+}
+.footer-style__description {
+  margin-top: 20px;
+  margin-bottom: 9px;
+  font-style: normal;
+  color: $primary-bg-color;
 }
 .logo__studio-white {
   color: $primary-bg-color;
@@ -39,17 +39,18 @@
   display: flex;
   padding: 0px;
   list-style: none;
-  .icons-sm__link {
-    background-color: $footer-link-sm;
-    @include transition(background-color);
+}
+.icons-sm__icon-view {
+  fill: $primary-bg-color;
+}
 
-    &:hover,
-    &:focus {
-      background-color: $accent-color;
-    }
-    .icon-view {
-      fill: $primary-bg-color;
-    }
+.icons-sm__link {
+  background-color: $footer-link-sm;
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
   }
 }
 
@@ -65,13 +66,8 @@
   color: $primary-bg-color;
 }
 
-.subscription {
+.footer-style-subscription {
   margin-left: 101px;
-  .button-style {
-    @include centred();
-    height: 50px;
-    padding: 10px 28px;
-  }
 }
 
 .form-footer {
@@ -99,4 +95,9 @@
 .form-footer__icon {
   align-items: center;
   margin-left: 10px;
+}
+.form-footer__button-style {
+  @include centred();
+  height: 50px;
+  padding: 10px 28px;
 }
