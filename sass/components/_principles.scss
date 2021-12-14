@@ -7,18 +7,58 @@
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .principles__icon {
   @include centred();
 
-  width: 270px;
+  // width: 270px;
   height: 120px;
   border-radius: 4px;
   background-color: $button-bg-color;
 }
+.principles__list {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -15px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-right: 30px;
+  }
+}
+
 .principles__list-item {
-  &:nth-child(4n) {
-    margin-right: 0px;
+  width: 270px;
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    width: 450px;
+  }
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 354px;
+    margin: 15px;
+    // width: calc(100%-2 * 30px) / 2;
+  }
+  @media screen and (min-width: 1200px) {
+    // display: flex;
+    // margin-right: 30px;
+    &:nth-child(4n) {
+      margin-right: 0px;
+    }
+    // &:nth-child(4n) {
+    //   margin-right: 0px;
+    // }
   }
 }

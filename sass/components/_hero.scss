@@ -5,26 +5,77 @@
 .hero__title {
   margin-top: 0px;
   margin-bottom: 30px;
-  width: 696px;
   margin-left: auto;
   margin-right: auto;
-
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
   letter-spacing: 0.06em;
   color: $primary-bg-color;
   text-transform: uppercase;
+  font-size: 26px;
+  line-height: 1.62;
+
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    width: 360px;
+    // font-size: 26px;
+    // line-height: 1.62;
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1600px) {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 .overlay {
-  height: 600px;
-  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   background-color: $bg-color;
-  background-image: linear-gradient(to right, $gradient, $gradient),
-    url("../images/overlay-img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media screen and (max-width: 767px) {
+    .overlay {
+      height: 400px;
+      //   width: 480px;
+      background-image: linear-gradient(to right, $gradient, $gradient),
+        url("../images/mobile-overlay.jpg");
+    }
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, $gradient, $gradient),
+        url("../images/mobile-overlay@2x.jpg");
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    .overlay {
+      height: 400px;
+      //   max-width: 768px;
+      background-image: linear-gradient(to right, $gradient, $gradient),
+        url("../images/tablet-overlay.jpg");
+    }
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, $gradient, $gradient),
+        url("../images/tablet-overlay@2x.jpg");
+    }
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1600px) {
+    .overlay {
+      height: 600px;
+      //   max-width: 1600px;
+      background-image: linear-gradient(to right, $gradient, $gradient),
+        url("../images/overlay-img.jpg");
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, $gradient, $gradient),
+        url("../images/desktop-overlayx.jpg");
+    }
+  }
 }

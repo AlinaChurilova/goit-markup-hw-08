@@ -1,5 +1,8 @@
 .part {
   padding-bottom: 94px;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 .list__works {
   display: block;

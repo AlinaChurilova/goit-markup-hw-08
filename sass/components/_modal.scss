@@ -7,6 +7,7 @@
   background-color: $bd-modal-window;
   opacity: 1;
   @include transition(opacity);
+  overflow-y: scroll;
 }
 .backdrop.is-hidden {
   visibility: visible;
@@ -15,12 +16,6 @@
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: scale(1) translate(-50%, -50%);
-  min-width: 528px;
-  min-height: 581px;
   background: $primary-bg-color;
   border-radius: 4px;
   box-shadow: $modal-shadow;
@@ -28,8 +23,44 @@
   .is-hidden & {
     transform: scale(1.1) translate(-50%, -50%);
   }
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 480px) and (max-width: 1600px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(1) translate(-50%, -50%);
+  }
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    width: 450px;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: scale(1) translate(-50%, -50%);
+  }
+  // @media (min-width: 480px) and (max-width: 1199px) {
+  //   width: 450px;
+
+  //   // min-height: 581px;
+  // }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
+
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: scale(1) translate(-50%, -50%);
+  // min-width: 450px;
+  // min-height: 609px;
 }
 .modal-title {
+  @media (max-width: 1199px) {
+    line-height: 1.5;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -39,7 +70,7 @@
   color: $title-text-color;
 }
 .data-form {
-  width: 528px;
+  // width: 528px;
   padding: 12px 40px 40px 40px;
   margin-left: auto;
   margin-right: auto;
@@ -120,6 +151,11 @@
   margin-left: 37px;
   margin-top: 20px;
   margin-bottom: 30px;
+  @media (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.17;
+    margin-left: 25px;
+  }
 
   @extend %font-style;
   font-weight: 400;
