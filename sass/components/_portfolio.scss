@@ -2,7 +2,7 @@
   @media screen and (max-width: 1199px) {
     padding: 60px 0;
   }
-  @media screen and (min-width: 1200px) and (max-width: 1600px) {
+  @media screen and (min-width: 1200px) {
     padding: 94px 0;
   }
 }
@@ -20,7 +20,7 @@
     justify-content: start;
     // margin-bottom: 30px;
   }
-  @media screen and (min-width: 768px) and (max-width: 1600px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     // justify-content: center;
   }
@@ -70,7 +70,7 @@
 }
 
 .projects {
-  @media screen and (min-width: 768px) and (max-width: 1600px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
     // justify-content: center;

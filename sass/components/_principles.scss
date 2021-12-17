@@ -1,5 +1,8 @@
 .principles {
   padding: 94px 0;
+  @media screen and (max-width: 1199px) {
+    padding: 60px 0;
+  }
 }
 .principles__item {
   @extend %font-style;

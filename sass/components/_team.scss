@@ -1,6 +1,9 @@
 .employee {
   padding: 94px 0px;
   background-color: $button-bg-color;
+  @media screen and (max-width: 1199px) {
+    padding: 60px 0px;
+  }
 }
 
 .employee__list {
